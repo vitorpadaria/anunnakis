@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const botoes1 = document.querySelectorAll('.botaoTeste');
     const botoes2 = document.querySelectorAll('.botaoTeste2');
 
-    // Configuração do Botão 1
     botoes1.forEach(function (botao) {
         botao.addEventListener('click', function () {
             if (desab) {
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     });
 
-    // Configuração do Botão 2
     botoes2.forEach(function (botao) {
         botao.addEventListener('click', function () {
             if (desab) {
@@ -26,8 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.fullscreenElement || document.documentElement.requestFullscreen();
                 return;
             }
-
-            // ATIVA O BLOQUEIO
             desab = true;
             window.open('https://www.youtube.com/watch?v=GMgsFZ4rkEI&t=14s', '_blank');
         });
