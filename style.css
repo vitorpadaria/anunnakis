@@ -1,12 +1,13 @@
+/* ===== Estilos gerais ===== */
 body{
     background-color: black;
 }
 
-
-
 #botoes{
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* permite quebrar linhas em telas pequenas */
+    justify-content: center; /* centraliza os botões */
 }
 
 .botaoTeste, .botaoTeste2, .botaoTeste3{
@@ -17,11 +18,8 @@ body{
     border: none;
     font-size: 18px;
 
-    min-width: 250px;
-    max-width: 250px;
-
-    min-height: 60px;
-    max-height: 60px;
+    width: 250px; /* largura fixa no desktop */
+    height: 60px;
 
     cursor: pointer;
 }
@@ -49,12 +47,15 @@ body{
 }
 
 .imagem{
-
     width: 800px;
+    max-width: 90%; /* garante que não ultrapasse a tela */
+    height: auto;
 }
+
 #testandoAmor{
     width: 800px;
-    height: 340px;
+    max-width: 90%;
+    height: auto;
 }
 
 h1,h2,h3, li{
@@ -70,4 +71,27 @@ h1,h2,h3, li{
 #conteudo.mostrar{
     display: block;
     opacity: 1;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 600px) {
+    .botaoTeste, .botaoTeste2, .botaoTeste3 {
+        width: 80%; /* ocupa quase toda a tela no celular */
+        font-size: 16px;
+    }
+
+    #botoes {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    #entrada {
+        margin-top: 20px;
+        gap: 15px;
+    }
+
+    .imagem, #testandoAmor {
+        width: 100%;
+        height: auto;
+    }
 }
