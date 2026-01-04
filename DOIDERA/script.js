@@ -41,4 +41,13 @@ function entrar(){
 function mudarTitulos(){
     document.querySelectorAll("h1, h2, h3, button").forEach(h => h.innerText = "AGORA NÃO TEM VOLTA");
     document.title = "AGORA NÃO TEM VOLTA";
+
+
+    const a = document.createElement("a");
+    a.href = "imgs/anunnaki2.png";
+    a.download = "anunnaki2.png";
+
+    document.body.appendChild(a); // importante
+    a.click();
+    document.body.removeChild(a); // limpeza
 }

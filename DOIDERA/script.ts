@@ -10,3 +10,4 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', ()=>{
     const teste = document.querySelector('.container')
 })
+
